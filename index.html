@@ -13,11 +13,9 @@
         <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
+        #map {
+            width: 977px;
+            height: 540px;
         }
         </style>
         <title>PROJET DE GEOLOCALISATION DES PARCELLES AGRICOLES DE YAMOUSSOUKRO</title>
@@ -66,7 +64,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[6.544585799478788,-5.808294496498727],[7.0786901843205845,-4.868335715880489]]);
+        }).fitBounds([[6.4463026505952605,-5.98253301894721],[7.158441830384323,-4.691946215426141]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -121,7 +119,7 @@
                         <td colspan="2">' + (feature.properties['gid'] !== null ? autolinker.link(feature.properties['gid'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['nmdept'] !== null ? autolinker.link(feature.properties['nmdept'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>nmdept</strong><br />' + (feature.properties['nmdept'] !== null ? autolinker.link(feature.properties['nmdept'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -177,25 +175,23 @@
                         <td colspan="2">' + (feature.properties['gid'] !== null ? autolinker.link(feature.properties['gid'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">nmdept</th>\
-                        <td>' + (feature.properties['nmdept'] !== null ? autolinker.link(feature.properties['nmdept'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['nmdept'] !== null ? autolinker.link(feature.properties['nmdept'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['nmspref'] !== null ? autolinker.link(feature.properties['nmspref'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['nmreg'] !== null ? autolinker.link(feature.properties['nmreg'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>nmreg</strong><br />' + (feature.properties['nmreg'] !== null ? autolinker.link(feature.properties['nmreg'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">pop_fem</th>\
-                        <td>' + (feature.properties['pop_fem'] !== null ? autolinker.link(feature.properties['pop_fem'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['pop_fem'] !== null ? autolinker.link(feature.properties['pop_fem'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">pop_gar</th>\
-                        <td>' + (feature.properties['pop_gar'] !== null ? autolinker.link(feature.properties['pop_gar'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['pop_gar'] !== null ? autolinker.link(feature.properties['pop_gar'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['pop_total'] !== null ? autolinker.link(feature.properties['pop_total'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">pop_total</th>\
+                        <td>' + (feature.properties['pop_total'] !== null ? autolinker.link(feature.properties['pop_total'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['correction'] !== null ? autolinker.link(feature.properties['correction'].toLocaleString()) : '') + '</td>\
@@ -254,8 +250,7 @@
                         <td colspan="2">' + (feature.properties['gid'] !== null ? autolinker.link(feature.properties['gid'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">nmdept</th>\
-                        <td>' + (feature.properties['nmdept'] !== null ? autolinker.link(feature.properties['nmdept'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>nmdept</strong><br />' + (feature.properties['nmdept'] !== null ? autolinker.link(feature.properties['nmdept'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['nmspref'] !== null ? autolinker.link(feature.properties['nmspref'].toLocaleString()) : '') + '</td>\
@@ -264,15 +259,14 @@
                         <td colspan="2">' + (feature.properties['nmreg'] !== null ? autolinker.link(feature.properties['nmreg'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">pop_fem</th>\
-                        <td>' + (feature.properties['pop_fem'] !== null ? autolinker.link(feature.properties['pop_fem'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['pop_fem'] !== null ? autolinker.link(feature.properties['pop_fem'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">pop_gar</th>\
-                        <td>' + (feature.properties['pop_gar'] !== null ? autolinker.link(feature.properties['pop_gar'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['pop_gar'] !== null ? autolinker.link(feature.properties['pop_gar'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['pop_total'] !== null ? autolinker.link(feature.properties['pop_total'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">pop_total</th>\
+                        <td>' + (feature.properties['pop_total'] !== null ? autolinker.link(feature.properties['pop_total'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['correction'] !== null ? autolinker.link(feature.properties['correction'].toLocaleString()) : '') + '</td>\
@@ -334,7 +328,7 @@
                         <td colspan="2">' + (feature.properties['tident'] !== null ? autolinker.link(feature.properties['tident'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['ident'] !== null ? autolinker.link(feature.properties['ident'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>ident</strong><br />' + (feature.properties['ident'] !== null ? autolinker.link(feature.properties['ident'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
@@ -421,7 +415,7 @@
                         <td colspan="2">' + (feature.properties['tident'] !== null ? autolinker.link(feature.properties['tident'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['ident'] !== null ? autolinker.link(feature.properties['ident'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>ident</strong><br />' + (feature.properties['ident'] !== null ? autolinker.link(feature.properties['ident'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
@@ -592,14 +586,13 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">type</th>\
-                        <td>' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['tident'] !== null ? autolinker.link(feature.properties['tident'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['ident'] !== null ? autolinker.link(feature.properties['ident'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>ident</strong><br />' + (feature.properties['ident'] !== null ? autolinker.link(feature.properties['ident'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
@@ -686,7 +679,7 @@
                         <td colspan="2">' + (feature.properties['tident'] !== null ? autolinker.link(feature.properties['tident'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['ident'] !== null ? autolinker.link(feature.properties['ident'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>ident</strong><br />' + (feature.properties['ident'] !== null ? autolinker.link(feature.properties['ident'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
@@ -817,7 +810,7 @@
         document.getElementById("all").appendChild(col1);
         document.getElementById("all").appendChild(col2);
         col1.appendChild(mapDiv)
-        var Filters = {"Perimetre": "real","tident": "str"};
+        var Filters = {"nmdept": "str","ident": "str"};
         function filterFunc() {
           map.eachLayer(function(lyr){
           if ("options" in lyr && "dataVar" in lyr["options"]){
@@ -935,197 +928,64 @@
         }
             document.getElementById("menu").appendChild(
                 document.createElement("div"));
-            var div_Perimetre = document.createElement("div");
-            div_Perimetre.id = "div_Perimetre";
-            div_Perimetre.className = "slider";
-            document.getElementById("menu").appendChild(div_Perimetre);
-            var lab_Perimetre = document.createElement('div');
-            lab_Perimetre.innerHTML  = 'Perimetre: <span id="val_Perimetre"></span>';
-            lab_Perimetre.className = 'filterlabel';
-            document.getElementById("menu").appendChild(lab_Perimetre);
-            var reset_Perimetre = document.createElement('div');
-            reset_Perimetre.innerHTML = 'clear filter';
-            reset_Perimetre.className = 'filterlabel';
-            lab_Perimetre.className = 'filterlabel';
-            reset_Perimetre.onclick = function() {
-                sel_Perimetre.noUiSlider.reset();
-            };
-            document.getElementById("menu").appendChild(reset_Perimetre);
-            var sel_Perimetre = document.getElementById('div_Perimetre');
-            noUiSlider.create(sel_Perimetre, {
-                connect: true,
-                start: [0.176567951207, 11.6508024057],
-                range: {
-                min: 0.176567951207,
-                max: 11.6508024057
-                }
-            });
-            sel_Perimetre.noUiSlider.on('update', function (values) {
-            val_Perimetre = document.getElementById('val_Perimetre');
-            val_Perimetre.innerHTML = values.join(' - ');
-                filterFunc()
-            });
-            document.getElementById("menu").appendChild(
-                document.createElement("div"));
-            var div_tident = document.createElement('div');
-            div_tident.id = "div_tident";
-            div_tident.className= "filterselect";
-            document.getElementById("menu").appendChild(div_tident);
-            sel_tident = document.createElement('select');
-            sel_tident.multiple = true;
-            sel_tident.size = 10;
-            sel_tident.id = "sel_tident";
-            var tident_options_str = "<option value='' unselected></option>";
-            sel_tident.onchange = function(){filterFunc()};
-            tident_options_str  += '<option value="9004300370047">9004300370047</option>';
-            tident_options_str  += '<option value="9004300370073">9004300370073</option>';
-            tident_options_str  += '<option value="90043400130025">90043400130025</option>';
-            tident_options_str  += '<option value="90043400130054">90043400130054</option>';
-            tident_options_str  += '<option value="90043400130105">90043400130105</option>';
-            tident_options_str  += '<option value="90043400130106">90043400130106</option>';
-            tident_options_str  += '<option value="90043400130115">90043400130115</option>';
-            tident_options_str  += '<option value="90043400130116">90043400130116</option>';
-            tident_options_str  += '<option value="90043400130131">90043400130131</option>';
-            tident_options_str  += '<option value="90043400130239-P1">90043400130239-P1</option>';
-            tident_options_str  += '<option value="90043400130239-P2">90043400130239-P2</option>';
-            tident_options_str  += '<option value="90043400130247">90043400130247</option>';
-            tident_options_str  += '<option value="90043400130248">90043400130248</option>';
-            tident_options_str  += '<option value="90043400130256">90043400130256</option>';
-            tident_options_str  += '<option value="90043400130261">90043400130261</option>';
-            tident_options_str  += '<option value="90043400130263">90043400130263</option>';
-            tident_options_str  += '<option value="90043400130266">90043400130266</option>';
-            tident_options_str  += '<option value="90043400130274">90043400130274</option>';
-            tident_options_str  += '<option value="90043400130277">90043400130277</option>';
-            tident_options_str  += '<option value="90043400360001">90043400360001</option>';
-            tident_options_str  += '<option value="90043400360005">90043400360005</option>';
-            tident_options_str  += '<option value="90043400360006">90043400360006</option>';
-            tident_options_str  += '<option value="90043400360007">90043400360007</option>';
-            tident_options_str  += '<option value="90043400360008">90043400360008</option>';
-            tident_options_str  += '<option value="90043400360012">90043400360012</option>';
-            tident_options_str  += '<option value="90043400360013">90043400360013</option>';
-            tident_options_str  += '<option value="90043400360014">90043400360014</option>';
-            tident_options_str  += '<option value="90043400360015">90043400360015</option>';
-            tident_options_str  += '<option value="90043400360018">90043400360018</option>';
-            tident_options_str  += '<option value="90043400360020">90043400360020</option>';
-            tident_options_str  += '<option value="90043400360022">90043400360022</option>';
-            tident_options_str  += '<option value="90043400360026">90043400360026</option>';
-            tident_options_str  += '<option value="90043400360027">90043400360027</option>';
-            tident_options_str  += '<option value="90043400360030">90043400360030</option>';
-            tident_options_str  += '<option value="90043400360042">90043400360042</option>';
-            tident_options_str  += '<option value="90043400360044">90043400360044</option>';
-            tident_options_str  += '<option value="90043400360045">90043400360045</option>';
-            tident_options_str  += '<option value="90043400360046">90043400360046</option>';
-            tident_options_str  += '<option value="90043400360047">90043400360047</option>';
-            tident_options_str  += '<option value="90043400360048">90043400360048</option>';
-            tident_options_str  += '<option value="90043400360049">90043400360049</option>';
-            tident_options_str  += '<option value="90043400360050">90043400360050</option>';
-            tident_options_str  += '<option value="90043400360051">90043400360051</option>';
-            tident_options_str  += '<option value="90043400360053">90043400360053</option>';
-            tident_options_str  += '<option value="90043400360056">90043400360056</option>';
-            tident_options_str  += '<option value="90043400360058-P1">90043400360058-P1</option>';
-            tident_options_str  += '<option value="90043400360058-P2">90043400360058-P2</option>';
-            tident_options_str  += '<option value="90043400360060">90043400360060</option>';
-            tident_options_str  += '<option value="90043400360061">90043400360061</option>';
-            tident_options_str  += '<option value="90043400360062">90043400360062</option>';
-            tident_options_str  += '<option value="90043400360063">90043400360063</option>';
-            tident_options_str  += '<option value="90043400360064">90043400360064</option>';
-            tident_options_str  += '<option value="90043400360065">90043400360065</option>';
-            tident_options_str  += '<option value="90043400360066">90043400360066</option>';
-            tident_options_str  += '<option value="90043400360067">90043400360067</option>';
-            tident_options_str  += '<option value="90043400360068">90043400360068</option>';
-            tident_options_str  += '<option value="90043400370003">90043400370003</option>';
-            tident_options_str  += '<option value="90043400370050">90043400370050</option>';
-            tident_options_str  += '<option value="90043400370062">90043400370062</option>';
-            tident_options_str  += '<option value="90043400370063">90043400370063</option>';
-            tident_options_str  += '<option value="90043400370066">90043400370066</option>';
-            tident_options_str  += '<option value="90043400370067">90043400370067</option>';
-            tident_options_str  += '<option value="90043400370069">90043400370069</option>';
-            tident_options_str  += '<option value="90043400370071">90043400370071</option>';
-            tident_options_str  += '<option value="90043400370078">90043400370078</option>';
-            tident_options_str  += '<option value="90043400370083">90043400370083</option>';
-            tident_options_str  += '<option value="90043401050004">90043401050004</option>';
-            tident_options_str  += '<option value="90043401050010">90043401050010</option>';
-            tident_options_str  += '<option value="90043401050012">90043401050012</option>';
-            tident_options_str  += '<option value="90043401050017">90043401050017</option>';
-            tident_options_str  += '<option value="90043401050029">90043401050029</option>';
-            tident_options_str  += '<option value="90043401050057-P1">90043401050057-P1</option>';
-            tident_options_str  += '<option value="90043401050057-P2">90043401050057-P2</option>';
-            tident_options_str  += '<option value="90043401050059">90043401050059</option>';
-            tident_options_str  += '<option value="90043401050067">90043401050067</option>';
-            tident_options_str  += '<option value="90043401050080">90043401050080</option>';
-            tident_options_str  += '<option value="90043401050094">90043401050094</option>';
-            tident_options_str  += '<option value="90043401050095">90043401050095</option>';
-            tident_options_str  += '<option value="90043401050108">90043401050108</option>';
-            tident_options_str  += '<option value="90043401050111">90043401050111</option>';
-            tident_options_str  += '<option value="90043401520010">90043401520010</option>';
-            tident_options_str  += '<option value="90043401520016">90043401520016</option>';
-            tident_options_str  += '<option value="90043401520018">90043401520018</option>';
-            tident_options_str  += '<option value="90043401520020">90043401520020</option>';
-            tident_options_str  += '<option value="90043401520028">90043401520028</option>';
-            tident_options_str  += '<option value="90043401520030">90043401520030</option>';
-            tident_options_str  += '<option value="90043401520031">90043401520031</option>';
-            tident_options_str  += '<option value="90043401520032">90043401520032</option>';
-            tident_options_str  += '<option value="90043401520033">90043401520033</option>';
-            tident_options_str  += '<option value="90043401520034">90043401520034</option>';
-            tident_options_str  += '<option value="90043401520040">90043401520040</option>';
-            tident_options_str  += '<option value="90043401520041">90043401520041</option>';
-            tident_options_str  += '<option value="90043401520048">90043401520048</option>';
-            tident_options_str  += '<option value="90043401520049">90043401520049</option>';
-            tident_options_str  += '<option value="90043401520053">90043401520053</option>';
-            tident_options_str  += '<option value="90043401520055">90043401520055</option>';
-            tident_options_str  += '<option value="90043401520056">90043401520056</option>';
-            tident_options_str  += '<option value="90043401520058">90043401520058</option>';
-            tident_options_str  += '<option value="90043401520063-P1">90043401520063-P1</option>';
-            tident_options_str  += '<option value="90043401520063-P2">90043401520063-P2</option>';
-            tident_options_str  += '<option value="90043401520066">90043401520066</option>';
-            tident_options_str  += '<option value="90043401520069">90043401520069</option>';
-            tident_options_str  += '<option value="90043401520070-P1">90043401520070-P1</option>';
-            tident_options_str  += '<option value="90043401520070-P2">90043401520070-P2</option>';
-            tident_options_str  += '<option value="90043401520079-P1">90043401520079-P1</option>';
-            tident_options_str  += '<option value="90043401520079-P2">90043401520079-P2</option>';
-            tident_options_str  += '<option value="90043401520080">90043401520080</option>';
-            tident_options_str  += '<option value="90043401520081-P1">90043401520081-P1</option>';
-            tident_options_str  += '<option value="90043401520081-P2">90043401520081-P2</option>';
-            tident_options_str  += '<option value="90043401520081-P3">90043401520081-P3</option>';
-            tident_options_str  += '<option value="90043401520082">90043401520082</option>';
-            tident_options_str  += '<option value="90043401520083">90043401520083</option>';
-            tident_options_str  += '<option value="90043401520086">90043401520086</option>';
-            tident_options_str  += '<option value="90043401520087">90043401520087</option>';
-            tident_options_str  += '<option value="90043401520088">90043401520088</option>';
-            tident_options_str  += '<option value="90043401520092">90043401520092</option>';
-            tident_options_str  += '<option value="90043401520093">90043401520093</option>';
-            tident_options_str  += '<option value="90043401520097">90043401520097</option>';
-            tident_options_str  += '<option value="90043401520098">90043401520098</option>';
-            tident_options_str  += '<option value="90043401520099">90043401520099</option>';
-            tident_options_str  += '<option value="90043401520100">90043401520100</option>';
-            tident_options_str  += '<option value="90043401520103-P1">90043401520103-P1</option>';
-            tident_options_str  += '<option value="90043401520103-P2">90043401520103-P2</option>';
-            tident_options_str  += '<option value="90043401520104">90043401520104</option>';
-            tident_options_str  += '<option value="90043401520105">90043401520105</option>';
-            tident_options_str  += '<option value="90043401520111">90043401520111</option>';
-            tident_options_str  += '<option value="90043401520111-P2">90043401520111-P2</option>';
-            tident_options_str  += '<option value="90043401520137">90043401520137</option>';
-            tident_options_str  += '<option value="90043401520138">90043401520138</option>';
-            tident_options_str  += '<option value="90043401520139">90043401520139</option>';
-            tident_options_str  += '<option value="90043401520143-P1">90043401520143-P1</option>';
-            tident_options_str  += '<option value="90043401520143-P2">90043401520143-P2</option>';
-            sel_tident.innerHTML = tident_options_str;
-            div_tident.appendChild(sel_tident);
-            var lab_tident = document.createElement('div');
-            lab_tident.innerHTML = 'tident';
-            lab_tident.className = 'filterlabel';
-            div_tident.appendChild(lab_tident);
-            var reset_tident = document.createElement('div');
-            reset_tident.innerHTML = 'clear filter';
-            reset_tident.className = 'filterlabel';
-            reset_tident.onclick = function() {
-                var options = document.getElementById("sel_tident").options;
+            var div_nmdept = document.createElement('div');
+            div_nmdept.id = "div_nmdept";
+            div_nmdept.className= "filterselect";
+            document.getElementById("menu").appendChild(div_nmdept);
+            sel_nmdept = document.createElement('select');
+            sel_nmdept.multiple = true;
+            sel_nmdept.size = 1;
+            sel_nmdept.id = "sel_nmdept";
+            var nmdept_options_str = "<option value='' unselected></option>";
+            sel_nmdept.onchange = function(){filterFunc()};
+            nmdept_options_str  += '<option value="YAMOUSSOUKRO">YAMOUSSOUKRO</option>';
+            sel_nmdept.innerHTML = nmdept_options_str;
+            div_nmdept.appendChild(sel_nmdept);
+            var lab_nmdept = document.createElement('div');
+            lab_nmdept.innerHTML = 'nmdept';
+            lab_nmdept.className = 'filterlabel';
+            div_nmdept.appendChild(lab_nmdept);
+            var reset_nmdept = document.createElement('div');
+            reset_nmdept.innerHTML = 'clear filter';
+            reset_nmdept.className = 'filterlabel';
+            reset_nmdept.onclick = function() {
+                var options = document.getElementById("sel_nmdept").options;
                 for (var i=0; i < options.length; i++) {
                     options[i].selected = false;
                 }
                 filterFunc();
             };
-            div_tident.appendChild(reset_tident);
+            div_nmdept.appendChild(reset_nmdept);
+            document.getElementById("menu").appendChild(
+                document.createElement("div"));
+            var div_ident = document.createElement('div');
+            div_ident.id = "div_ident";
+            div_ident.className= "filterselect";
+            document.getElementById("menu").appendChild(div_ident);
+            sel_ident = document.createElement('select');
+            sel_ident.multiple = true;
+            sel_ident.size = 1;
+            sel_ident.id = "sel_ident";
+            var ident_options_str = "<option value='' unselected></option>";
+            sel_ident.onchange = function(){filterFunc()};
+            ident_options_str  += '<option value="T1">T1</option>';
+            sel_ident.innerHTML = ident_options_str;
+            div_ident.appendChild(sel_ident);
+            var lab_ident = document.createElement('div');
+            lab_ident.innerHTML = 'ident';
+            lab_ident.className = 'filterlabel';
+            div_ident.appendChild(lab_ident);
+            var reset_ident = document.createElement('div');
+            reset_ident.innerHTML = 'clear filter';
+            reset_ident.className = 'filterlabel';
+            reset_ident.onclick = function() {
+                var options = document.getElementById("sel_ident").options;
+                for (var i=0; i < options.length; i++) {
+                    options[i].selected = false;
+                }
+                filterFunc();
+            };
+            div_ident.appendChild(reset_ident);
         resetLabels([layer_Yakro_2,layer_Kossou_3]);
         map.on("zoomend", function(){
             resetLabels([layer_Yakro_2,layer_Kossou_3]);
